@@ -16,7 +16,8 @@
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
 #define STRING_VERSION_CONFIG_H "MendelMax_3-0_RAMBo_1-2_E3D on " __DATE__ " " __TIME__ // build date and time
-#define STRING_CONFIG_H_AUTHOR "Maker's Tool Works edited Dec 2, 2014" // Who made the changes.
+//#define STRING_CONFIG_H_AUTHOR "Maker's Tool Works edited Dec 2, 2014" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "Dave Hylands edited" // Who made the changes.
 
 // SERIAL_PORT selects which serial port should be used for communication with the host.
 // This allows the connection of wireless adapters (for instance) to non-default port pins.
@@ -24,8 +25,10 @@
 #define SERIAL_PORT 0
 
 // This determines the communication speed of the printer
-#define BAUDRATE 250000
-//#define BAUDRATE 115200
+// DH: While linux supports 250000 (and pyserial too), RepetierHost doesn't yet
+// DH: seem to support this. So I've backed down to 115200 for the time being.
+//#define BAUDRATE 250000
+#define BAUDRATE 115200
 
 // This enables the serial port associated to the Bluetooth interface
 //#define BTENABLED              // Enable BT interface on AT90USB devices
@@ -313,7 +316,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 #define max_software_endstops true  // If true, axis won't move to coordinates greater than the defined lengths below.
 
 // Travel limits after homing
-#define X_MAX_POS 230
+#define X_MAX_POS 260
 #define X_MIN_POS 0
 #define Y_MAX_POS 310
 #define Y_MIN_POS 0
@@ -470,7 +473,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 // http://reprap.org/wiki/RepRapDiscount_Full_Graphic_Smart_Controller
 //
 // ==> REMEMBER TO INSTALL U8glib to your ARDUINO library folder: http://code.google.com/p/u8glib/wiki/u8glib
-//#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
+#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
 
 // The RepRapWorld REPRAPWORLD_KEYPAD v1.1
 // http://reprapworld.com/?products_details&products_id=202&cPath=1591_1626
