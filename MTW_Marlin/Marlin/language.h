@@ -33,7 +33,8 @@
 	#define MACHINE_NAME "3Drag"
 	#define FIRMWARE_URL "http://3dprint.elettronicain.it/"
 #elif MOTHERBOARD == 301
-	#define MACHINE_NAME "MendelMax 2"
+//	#define MACHINE_NAME "MendelMax 2"
+	#define MACHINE_NAME "Dave's MM3"
 	#define FIRMWARE_URL "http://makerstoolworks.com/"
 #else
 	#ifdef CUSTOM_MENDEL_NAME
