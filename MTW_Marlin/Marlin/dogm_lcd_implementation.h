@@ -232,9 +232,9 @@ static void lcd_implementation_status_screen()
 		 u8g.drawBox(38,17,2,2);
 		 u8g.setColorIndex(1);	// black on white
 		}
- #else
- u8g.setPrintPos(31,27);
- u8g.print("---");
+ //#else
+ //u8g.setPrintPos(31,27);
+ //u8g.print("---");
  #endif
  
  // Extruder 3
@@ -253,9 +253,9 @@ static void lcd_implementation_status_screen()
 		 u8g.drawBox(62,17,2,2);
 		 u8g.setColorIndex(1);	// black on white
 		}
- #else
- u8g.setPrintPos(55,27);
- u8g.print("---");
+ //#else
+ //u8g.setPrintPos(55,27);
+ //u8g.print("---");
  #endif
  
  // Heatbed
